@@ -1,0 +1,11 @@
+{
+    "curly": true,
+    "boss": true,
+    "undef": true,
+    "predef": [
+        "angular",
+        "_"
+    ],
+    "globalstrict": true,
+    "strict": true
+}
