@@ -15,8 +15,7 @@ module.exports = function (config) {
             '.tmp/lib/angular-route/angular-route.js',
             'app/scripts/main.js',
             'app/scripts/**/*.js',
-            'tests/app/mocks/**/*.coffee',
-            'tests/app/**/*.coffee'
+            'tests/app/**/*.js'
         ],
 
         // list of files to exclude
@@ -80,7 +79,6 @@ module.exports = function (config) {
             'karma-chrome-launcher',
             'karma-firefox-launcher',
             'karma-phantomjs-launcher',
-            'karma-coffee-preprocessor'
         ]
     });
 };

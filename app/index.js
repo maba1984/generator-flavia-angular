@@ -39,10 +39,16 @@ var FlaviaAngularGenerator = yeoman.generators.Base.extend({
       this.dest.mkdir('app/styles');
       this.dest.mkdir('app/views');
       this.dest.mkdir('app/grunt_config');
-      this.dest.mkdir('app/tests');
+      this.dest.mkdir('tests/app');
+      this.dest.mkdir('tests/app/controllers');
+      this.dest.mkdir('tests/app/routes');
+      this.dest.mkdir('tests/app/services');
+      this.dest.mkdir('tests/app/directives');
+      this.dest.mkdir('tests/app/filters');
 
       this.template('_package.json', 'package.json', {appName:this.appName});
       this.template('_bower.json', 'bower.json', {appName:this.appName});
+      this.template('_route.spec.js', 'route.spec.js', {appName:this.appName});
       this.src.copy('jshintrc', '.jshintrc');
       this.src.copy('bowerrc', '.bowerrc');
       this.src.copy('gitignore', '.gitignore');
