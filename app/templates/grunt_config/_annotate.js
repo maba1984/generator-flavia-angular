@@ -4,7 +4,7 @@ module.exports = function(options, grunt) {
     var paths = options.paths;
 
     return {
-        afair42: {
+        <%= appName %>: {
             files: [
                 {
                     expand: true,

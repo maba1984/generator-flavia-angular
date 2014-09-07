@@ -48,14 +48,15 @@ var FlaviaAngularGenerator = yeoman.generators.Base.extend({
 
       this.template('_package.json', 'package.json', {appName:this.appName});
       this.template('_bower.json', 'bower.json', {appName:this.appName});
-      this.template('_route.spec.js', 'route.spec.js', {appName:this.appName});
+      this.template('_route.spec.js', 'tests/app/routes/route.spec.js', {appName:this.appName});
       this.src.copy('jshintrc', '.jshintrc');
       this.src.copy('bowerrc', '.bowerrc');
       this.src.copy('gitignore', '.gitignore');
       this.src.copy('_Gruntfile.js', 'Gruntfile.js');
       this.src.copy('_karma.conf.js', 'karma.conf.js');
 
-      this.src.copy('grunt_config/_annotate.js', 'grunt_config/annotate.js');
+      this.template('grunt_config/_annotate.js', 'grunt_config/annotate.js', {appName:this.appName});
+      this.template('grunt_config/_ngtemplates.js', 'grunt_config/ngtemplates.js', {appName:this.appName});
       this.src.copy('grunt_config/_bower.js', 'grunt_config/bower.js');
       this.src.copy('grunt_config/_clean.js', 'grunt_config/clean.js');
       this.src.copy('grunt_config/_connect.js', 'grunt_config/connect.js');
@@ -64,7 +65,6 @@ var FlaviaAngularGenerator = yeoman.generators.Base.extend({
       this.src.copy('grunt_config/_karma.js', 'grunt_config/karma.js');
       this.src.copy('grunt_config/_less.js', 'grunt_config/less.js');
       this.src.copy('grunt_config/_libs.js', 'grunt_config/libs.js');
-      this.src.copy('grunt_config/_ngtemplates.js', 'grunt_config/ngtemplates.js');
       this.src.copy('grunt_config/_npm.js', 'grunt_config/npm.js');
       this.src.copy('grunt_config/_sync.js', 'grunt_config/sync.js');
       this.src.copy('grunt_config/_uglify.js', 'grunt_config/uglify.js');

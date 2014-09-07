@@ -5,7 +5,7 @@ module.exports = function(options, grunt) {
     var paths = options.paths;
 
     return {
-        afair42: {
+        <%= appName %>: {
             src: "{views,templates}/**/*.html",
             dest: "" + paths.dev + "/scripts/templates.js",
             cwd: paths.app,
