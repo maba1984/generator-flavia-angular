@@ -10,7 +10,7 @@ module.exports = function(options, grunt) {
             tasks: ["sync:dev_js", "htmlbuild:dev"]
         },
         tests: {
-            files: "tests/**/*.coffee",
+            files: "tests/**/*.js",
             tasks: ["karma:dev"]
         },
         less: {
@@ -26,11 +26,11 @@ module.exports = function(options, grunt) {
             tasks: ["sync:dev_static"]
         },
         grunt: {
-            files: ["Gruntfile.coffee"],
+            files: ["Gruntfile.js"],
             tasks: ["deps", "compile_dev"]
         },
         libs: {
-            files: ["grunt_config/libs.coffee"],
+            files: ["grunt_config/libs.js"],
             tasks: ["htmlbuild:dev"]
         },
         npm: {
